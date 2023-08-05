@@ -34,9 +34,4 @@ variable "work_item_template" {
   description = "Specifies the work item template. Valid values: Agile, Basic, CMMI, Scrum or a custom, pre-existing one. Defaults to Agile."
   type        = string
   default     = "Agile"
-
-  validation {
-    condition     = contains(["Agile", "Basic", "CMMI", "Scrum", "custom"], var.work_item_template)
-    error_message = "The work_item_template value must be one of Agile, Basic, CMMI, Scrum or custom."
-  }
 }
